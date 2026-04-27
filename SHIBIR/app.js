@@ -1,6 +1,7 @@
 const currentKey = document.body.dataset.page || "samp";
 const currentPage = pages.find((page) => page.key === currentKey) || pages[0];
 const currentData = quizData[currentPage.key];
+const ASSET_VERSION = "20260427-2";
 
 document.title = `${currentPage.title} | SHIBIR Afternoon Session`;
 
@@ -54,7 +55,7 @@ const optionGroups = splitActivityOptions(currentData.activityDetails || []);
 activitySequence.innerHTML = optionGroups.map((sections, index) => `
   <article class="activity-option">
     <div class="activity-image">
-      <img src="${images[index] || images[0]}" alt="${currentData.heading} activity ${index + 1}">
+      <img src="${images[index] || images[0]}?v=${ASSET_VERSION}" alt="${currentData.heading} activity ${index + 1}">
     </div>
     <div class="activity-details">
       ${renderActivityDetails(sections)}
