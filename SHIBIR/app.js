@@ -12,13 +12,9 @@ nav.innerHTML = pages.map((page) => `
 document.querySelector("[data-title]").textContent = currentData.heading;
 document.querySelector("[data-title-em]").textContent = "";
 document.querySelector("[data-note]").textContent = currentData.note;
-document.querySelector("[data-activity-title]").textContent = currentData.heading;
-document.querySelector("[data-activity-text]").textContent = currentData.activityText;
-document.querySelector("[data-activity-image]").src = currentPage.image;
-document.querySelector("[data-activity-image]").alt = `${currentData.heading} activity`;
-
-const activityDetails = document.querySelector("[data-activity-details]");
-activityDetails.innerHTML = (currentData.activityDetails || []).map((section, index) => {
+function renderActivityDetails(sections) {
+  return sections.map((section) => {
+  const isTitle = isActivityTitle(section);
   const listTag = section.ordered ? "ol" : "ul";
   const items = section.items ? `
     <${listTag}>
@@ -26,13 +22,45 @@ activityDetails.innerHTML = (currentData.activityDetails || []).map((section, in
     </${listTag}>
   ` : "";
   return `
-    <section class="activity-detail ${index === 0 ? "activity-detail-title" : ""}">
+    <section class="activity-detail ${isTitle ? "activity-detail-title" : ""}">
       <h4>${section.title}</h4>
-      ${section.subtitle ? `<p class="activity-subtitle">${section.subtitle}</p>` : ""}
       ${items}
     </section>
   `;
-}).join("");
+  }).join("");
+}
+
+function isActivityTitle(section) {
+  return !section.items;
+}
+
+function splitActivityOptions(details) {
+  const options = [];
+  let current = [];
+  details.forEach((section) => {
+    if (isActivityTitle(section) && current.length) {
+      options.push(current);
+      current = [];
+    }
+    current.push(section);
+  });
+  if (current.length) options.push(current);
+  return options;
+}
+
+const activitySequence = document.querySelector("[data-activity-sequence]");
+const images = currentPage.images || [currentPage.image];
+const optionGroups = splitActivityOptions(currentData.activityDetails || []);
+activitySequence.innerHTML = optionGroups.map((sections, index) => `
+  <article class="activity-option">
+    <div class="activity-image">
+      <img src="${images[index] || images[0]}" alt="${currentData.heading} activity ${index + 1}">
+    </div>
+    <div class="activity-details">
+      ${renderActivityDetails(sections)}
+    </div>
+  </article>
+`).join("");
 
 const questionGrid = document.querySelector("[data-questions]");
 if (currentData.questions.length === 0) {

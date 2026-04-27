@@ -1,18 +1,18 @@
 const pages = [
-  { key: "samp", title: "સંપ", file: "samp.html", image: "SAMP.png" },
+  { key: "samp", title: "સંપ", file: "samp.html", image: "SAMP.png", images: ["SAMP.png", "SAMP-2.png"] },
   { key: "das-bhav", title: "દાસભાવ", file: "das-bhav.html", image: "DAS-BHAV.png" },
   { key: "agna-upasana", title: "આજ્ઞા & ઉપાસના", file: "agna-upasana.html", image: "AGNA.png" },
-  { key: "sahan", title: "સહન", file: "sahan.html", image: "SAHAN.png" },
-  { key: "dhiraj", title: "ધીરજ", file: "dhiraj.html", image: "DHIRAJ.png" },
+  { key: "sahan", title: "સહન", file: "sahan.html", image: "SAHAN.png", images: ["SAHAN.png", "SAHAN-2.png"] },
+  { key: "dhiraj", title: "ધીરજ", file: "dhiraj.html", image: "DHIRAJ.png", images: ["DHIRAJ.png", "DHIRAJ-2.png"] },
   { key: "niyam-dharma", title: "નિયમ-ધર્મ", file: "niyam-dharma.html", image: "NIYAM-DHARMA.png" }
 ];
 
 const activityInfo = {
   samp: [
-    { title: "🟡 Samp, Unity", subtitle: "Hula Hoop Circle" },
-    { title: "🎯 Objective", items: ["Pass the hula hoop around the entire circle without letting go of each other’s hands."] },
-    { title: "📦 Materials Needed", items: ["Hula hoop"] },
-    { title: "📋 Instructions", ordered: true, items: [
+    { title: "Option 1: Hula Hoop Circle" },
+    { title: "Objective", items: ["Pass the hula hoop around the entire circle without letting go of each other’s hands."] },
+    { title: "Materials Needed", items: ["Hula hoop"] },
+    { title: "Instructions", ordered: true, items: [
       "All team members stand in a circle.",
       "Everyone holds hands.",
       "Place the hula hoop between two people before they join hands.",
@@ -21,13 +21,34 @@ const activityInfo = {
       "Hands must stay connected at all times.",
       "If anyone lets go, the team must restart."
     ] },
-    { title: "🔁 Extra Challenge", items: ["Try one round without talking."] }
+    { title: "Extra Challenge", items: ["Try one round without talking."] },
+    { title: "Option 2: Blindfold Bat and Ball Challenge" },
+    { title: "Objective", items: ["Knock the soft ball off your partner’s head by following their instructions while blindfolded."] },
+    { title: "Materials Needed", items: ["Soft foam bat or cushion bat", "Soft ball", "Blindfold", "Open space"] },
+    { title: "Instructions", ordered: true, items: [
+      "Divide participants into pairs.",
+      "One participant balances a soft ball on their head.",
+      "The other participant holds a soft foam bat and is blindfolded.",
+      "The blindfolded participant must not swing randomly.",
+      "The partner with the ball gives clear verbal instructions, such as “move one step forward,” “turn slightly left,” or “raise the bat a little.”",
+      "The blindfolded participant follows only their partner’s guidance.",
+      "The goal is to gently hit the ball off the partner’s head using the soft bat.",
+      "Once the ball falls, the challenge is complete.",
+      "Partners may switch roles after one round."
+    ] },
+    { title: "Safety Rules", items: [
+      "Use only a soft bat and soft ball.",
+      "The blindfolded person should swing gently.",
+      "No hard hitting.",
+      "A volunteer should stand nearby to make sure the game stays safe."
+    ] },
+    { title: "Extra Challenge", items: ["Make it a team relay where each pair gets one attempt, and the team with the most successful hits wins."] }
   ],
   "das-bhav": [
-    { title: "🔵 Das-Bhav, Humility", subtitle: "Limbo Challenge" },
-    { title: "🎯 Objective", items: ["Pass under the limbo bar as it gets lower each round."] },
-    { title: "📦 Materials Needed", items: ["Limbo stick, rope, pool noodle, or any safe bar"] },
-    { title: "📋 Instructions", ordered: true, items: [
+    { title: "Limbo Challenge" },
+    { title: "Objective", items: ["Pass under the limbo bar as it gets lower each round."] },
+    { title: "Materials Needed", items: ["Limbo stick, rope, pool noodle, or any safe bar"] },
+    { title: "Instructions", ordered: true, items: [
       "Two volunteers hold the limbo bar.",
       "One participant goes at a time.",
       "Each participant must pass under the bar by leaning backward.",
@@ -36,13 +57,13 @@ const activityInfo = {
       "After every round, lower the bar slightly.",
       "Continue until the final participant remains, or until the team completes the challenge."
     ] },
-    { title: "🔁 Reflection Before Turn", items: ["Before going under the bar, each participant may share one way they can practice humility in daily life."] }
+    { title: "Reflection Before Turn", items: ["Before going under the bar, each participant may share one way they can practice humility in daily life."] }
   ],
   "agna-upasana": [
-    { title: "🟢 Agna, Obedience", subtitle: "Blindfold Trust Walk" },
-    { title: "🎯 Objective", items: ["Reach the finish line safely by following instructions from teammates."] },
-    { title: "📦 Materials Needed", items: ["Blindfold", "Cones or simple obstacles"] },
-    { title: "📋 Instructions", ordered: true, items: [
+    { title: "Blindfold Trust Walk" },
+    { title: "Objective", items: ["Reach the finish line safely by following instructions from teammates."] },
+    { title: "Materials Needed", items: ["Blindfold", "Cones or simple obstacles"] },
+    { title: "Instructions", ordered: true, items: [
       "Choose one participant to be blindfolded.",
       "Set up a simple path with cones or safe obstacles.",
       "The blindfolded participant must walk from the start line to the finish line.",
@@ -51,26 +72,38 @@ const activityInfo = {
       "The blindfolded participant must listen carefully and follow the instructions.",
       "If they touch an obstacle, pause and continue from that spot."
     ] },
-    { title: "🔁 Extra Challenge", items: ["Allow only one teammate to give directions, while others remain silent."] }
+    { title: "Extra Challenge", items: ["Allow only one teammate to give directions, while others remain silent."] }
   ],
   sahan: [
-    { title: "🧊💎 Sahan, Tolerance", subtitle: "Ice Diamond Challenge" },
-    { title: "🎯 Objective", items: ["Melt the ice using only your hands and retrieve the diamond inside."] },
-    { title: "📦 Materials Needed", items: ["Ice blocks with small plastic diamonds or objects frozen inside", "Tray or bowl", "Towels"] },
-    { title: "📋 Instructions", ordered: true, items: [
+    { title: "Option 1: Ice Diamond Challenge" },
+    { title: "Objective", items: ["Melt the ice using only your hands and retrieve the diamond inside."] },
+    { title: "Materials Needed", items: ["Ice blocks with small plastic diamonds or objects frozen inside", "Tray or bowl", "Towels"] },
+    { title: "Instructions", ordered: true, items: [
       "Each team receives one ice block with a diamond inside.",
       "Participants must melt the ice using only their hands.",
       "They may take turns holding and rubbing the ice.",
       "No tools, breaking, hitting, or throwing the ice is allowed.",
       "The team continues until the diamond is fully released.",
       "Once the diamond is free, the challenge is complete."
-    ] }
+    ] },
+    { title: "Option 2: Chair Position Challenge" },
+    { title: "Objective", items: ["Stay in a sitting position without using an actual chair for as long as possible."] },
+    { title: "Materials Needed", items: ["Open space", "Timer"] },
+    { title: "Instructions", ordered: true, items: [
+      "Participants stand with their back against a wall or in an open space.",
+      "They slowly bend their knees and sit as if they are sitting on an invisible chair.",
+      "Their knees should be bent, and their back should stay straight.",
+      "Hands should not touch the ground, wall, knees, or any other support.",
+      "Once the participant stands up, falls, or takes support, they are out.",
+      "The person who holds the position the longest wins."
+    ] },
+    { title: "Safety Note", items: ["Do not force anyone to continue if they feel pain or discomfort. This game should test endurance, not cause injury."] }
   ],
   dhiraj: [
-    { title: "💧 Dhiraj, Patience", subtitle: "Steady Steps Challenge" },
-    { title: "🎯 Objective", items: ["Carry a cup of water from start to finish without spilling too much."] },
-    { title: "📦 Materials Needed", items: ["Plastic cups", "Water", "Tape for start and finish lines"] },
-    { title: "📋 Instructions", ordered: true, items: [
+    { title: "Option 1: Steady Steps Challenge" },
+    { title: "Objective", items: ["Carry a cup of water from start to finish without spilling too much."] },
+    { title: "Materials Needed", items: ["Plastic cups", "Water", "Tape for start and finish lines"] },
+    { title: "Instructions", ordered: true, items: [
       "Fill a cup of water up to the marked line.",
       "One participant starts at the start line.",
       "They must walk slowly to the finish line while holding the cup.",
@@ -79,13 +112,29 @@ const activityInfo = {
       "Each team member can take a turn.",
       "The challenge is complete when the team successfully carries the water to the finish line."
     ] },
-    { title: "🔁 Extra Challenge", items: ["Ask participants to walk with the cup using one hand only."] }
+    { title: "Extra Challenge", items: ["Ask participants to walk with the cup using one hand only."] },
+    { title: "Option 2: Pin-Drop Silence Challenge" },
+    { title: "Objective", items: ["Remain completely silent while others try to distract you."] },
+    { title: "Materials Needed", items: ["Open space", "Timer"] },
+    { title: "Instructions", ordered: true, items: [
+      "Four to six participants sit in a circle.",
+      "Once the game begins, no one in the circle is allowed to speak, laugh loudly, or make noise.",
+      "Other volunteers or team members stand around them and try to distract them in a safe and respectful way.",
+      "They may make funny faces, say light jokes, or try to make them laugh.",
+      "The participants sitting in the circle must remain calm, silent, and focused.",
+      "If someone speaks, laughs loudly, or reacts too much, they are out.",
+      "The participant who remains silent the longest wins."
+    ] },
+    { title: "Rules", items: [
+      "No touching, shouting in someone’s ear, or saying anything disrespectful.",
+      "Distractions should be fun, clean, and safe."
+    ] }
   ],
   "niyam-dharma": [
-    { title: "🔴 Niyam-Dharma, Discipline", subtitle: "Balance Box Challenge" },
-    { title: "🎯 Objective", items: ["Balance balloons on a tray while staying inside the marked boundary."] },
-    { title: "📦 Materials Needed", items: ["Tray or cardboard board", "Balloons", "Tape to mark a square on the floor"] },
-    { title: "📋 Instructions", ordered: true, items: [
+    { title: "Balance Box Challenge" },
+    { title: "Objective", items: ["Balance balloons on a tray while staying inside the marked boundary."] },
+    { title: "Materials Needed", items: ["Tray or cardboard board", "Balloons", "Tape to mark a square on the floor"] },
+    { title: "Instructions", ordered: true, items: [
       "Mark a square boundary on the floor using tape.",
       "Two team members stand inside the square and hold the tray together.",
       "Other team members gently toss balloons onto the tray.",
@@ -95,7 +144,7 @@ const activityInfo = {
       "They cannot grab the balloons with their hands.",
       "The goal is to keep as many balloons as possible on the tray for a set time."
     ] },
-    { title: "⚠️ Rules", items: [
+    { title: "Rules", items: [
       "Hands can only hold the tray.",
       "Players must remain inside the boundary.",
       "If a balloon falls, it cannot be picked up again."
