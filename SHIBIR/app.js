@@ -1,7 +1,7 @@
 const currentKey = document.body.dataset.page || "samp";
 const currentPage = pages.find((page) => page.key === currentKey) || pages[0];
 const currentData = quizData[currentPage.key];
-const ASSET_VERSION = "20260427-2";
+const ASSET_VERSION = "20260429-1";
 
 document.title = `${currentPage.title} | SHIBIR Afternoon Session`;
 
