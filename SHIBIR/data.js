@@ -4,7 +4,10 @@ const pages = [
   { key: "agna-upasana", title: "આજ્ઞા & ઉપાસના", file: "agna-upasana.html", image: "AGNA.png" },
   { key: "sahan", title: "સહન", file: "sahan.html", image: "SAHAN.png", images: ["SAHAN.png", "SAHAN-2.png"] },
   { key: "dhiraj", title: "ધીરજ", file: "dhiraj.html", image: "DHIRAJ.png", images: ["DHIRAJ.png", "DHIRAJ-2.png"] },
-  { key: "niyam-dharma", title: "નિયમ-ધર્મ", file: "niyam-dharma.html", image: "NIYAM-DHARMA.png" }
+  { key: "niyam-dharma", title: "નિયમ-ધર્મ", file: "niyam-dharma.html", image: "NIYAM-DHARMA.png" },
+  { key: "mahima", title: "મહિમા", file: "mahima.html", image: "MAHIMA.png" },
+  { key: "kirtan", title: "કીર્તન", file: "kirtan.html", image: "KIRTAN.png" },
+  { key: "purusharth", title: "પુરુષાર્થ", file: "purusharth.html", image: "PURUSHARTH.png" }
 ];
 
 const activityInfo = {
@@ -149,6 +152,78 @@ const activityInfo = {
       "Players must remain inside the boundary.",
       "If a balloon falls, it cannot be picked up again."
     ] }
+  ],
+  mahima: [
+    { title: "Gun Darshan Ball Pass Challenge" },
+    { title: "Objective", items: ["Recognize and share one good quality, gun, of someone in the group."] },
+    { title: "Materials Needed", items: ["1 soft ball", "Speaker", "Kirtan or music", "Open space"] },
+    { title: "Setup", ordered: true, items: [
+      "Make one group of 8 to 10 participants.",
+      "Ask everyone to sit or stand in a circle.",
+      "Give one soft ball to the group.",
+      "Start playing kirtan or music."
+    ] },
+    { title: "Instructions", ordered: true, items: [
+      "When the music starts, participants pass the ball around the group.",
+      "Everyone must keep passing the ball until the music stops.",
+      "When the music stops, the person holding the ball stays in their place.",
+      "That person chooses anyone in the group and says one good quality about them.",
+      "After they share, start the music again.",
+      "Continue for multiple rounds so different people get a chance."
+    ] },
+    { title: "Rules", items: [
+      "The quality must be respectful and positive.",
+      "Do not repeat the same quality too many times.",
+      "Try to be specific.",
+      "No teasing or comments that may hurt someone.",
+      "If someone cannot think of a quality, the group can help them."
+    ] }
+  ],
+  kirtan: [
+    { title: "Kirtan Musical Chair Challenge" },
+    { title: "Objective", items: ["Play musical chairs using kirtan as the music and learn the importance of staying connected to satsang."] },
+    { title: "Materials Needed", items: ["Chairs", "Speaker", "Phone or laptop", "Kirtan playlist"] },
+    { title: "Setup", ordered: true, items: [
+      "Place the chairs in a straight line.",
+      "Chairs should face alternating directions.",
+      "Example: first chair faces left, second chair faces right, third chair faces left, and so on.",
+      "Keep one chair fewer than the number of participants.",
+      "Example: If 10 people are playing, place 9 chairs.",
+      "Ask participants to stand in a line near the chairs."
+    ] },
+    { title: "Instructions", ordered: true, items: [
+      "When the kirtan starts, participants walk around the straight line of chairs.",
+      "Everyone should keep moving in the same direction.",
+      "When they reach the end of the chair line, they turn around and continue walking around the chairs.",
+      "When the kirtan stops, everyone must quickly sit on a chair.",
+      "The person left without a chair is out for that round.",
+      "Remove one chair after every round.",
+      "Start the kirtan again and continue the game.",
+      "Keep playing until one final participant remains.",
+      "The last person sitting is the winner."
+    ] },
+    { title: "Rules", items: [
+      "No pushing, pulling, or blocking others.",
+      "Do not sit before the kirtan stops.",
+      "Walk calmly and safely.",
+      "Chairs should have enough space around them.",
+      "Use clean and uplifting kirtans only."
+    ] }
+  ],
+  purusharth: [
+    { title: "Apple Bobbing Challenge" },
+    { title: "Objective", items: ["Retrieve an apple from the water using only your mouth."] },
+    { title: "Materials Needed", items: ["Large tub or bucket", "Clean water", "Apples", "Towels"] },
+    { title: "Instructions", ordered: true, items: [
+      "Fill a tub or bucket with clean water.",
+      "Place a few apples in the water.",
+      "One participant goes at a time.",
+      "The participant must keep both hands behind their back.",
+      "They must try to bite and lift an apple using only their mouth.",
+      "Once the apple is lifted out of the water, the challenge is complete.",
+      "If the participant is unable to get the apple, another teammate may try."
+    ] },
+    { title: "Safety Note", items: ["Use clean water and fresh apples. Replace the water when needed. Make sure participants do not push their face too deep into the water."] }
   ]
 };
 
@@ -324,6 +399,27 @@ const quizData = {
         ]
       }
     ]
+  },
+  mahima: {
+    heading: "મહિમા",
+    note: "",
+    activityText: "",
+    activityDetails: activityInfo.mahima,
+    questions: []
+  },
+  kirtan: {
+    heading: "કીર્તન",
+    note: "",
+    activityText: "",
+    activityDetails: activityInfo.kirtan,
+    questions: []
+  },
+  purusharth: {
+    heading: "પુરુષાર્થ",
+    note: "",
+    activityText: "",
+    activityDetails: activityInfo.purusharth,
+    questions: []
   },
   "niyam-dharma": {
     heading: "નિયમ-ધર્મ",
