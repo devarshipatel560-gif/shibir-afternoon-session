@@ -1,7 +1,7 @@
 const currentKey = document.body.dataset.page || "samp";
 const currentPage = pages.find((page) => page.key === currentKey) || pages[0];
 const currentData = quizData[currentPage.key];
-const ASSET_VERSION = "20260429-1";
+const ASSET_VERSION = "20260502-3";
 
 document.title = `${currentPage.title} | SHIBIR Afternoon Session`;
 
@@ -13,6 +13,8 @@ nav.innerHTML = pages.map((page) => `
 document.querySelector("[data-title]").textContent = currentData.heading;
 document.querySelector("[data-title-em]").textContent = "";
 document.querySelector("[data-note]").textContent = currentData.note;
+const questionCount = document.querySelector("[data-question-count]");
+if (questionCount) questionCount.textContent = currentData.questions.length;
 function renderActivityDetails(sections) {
   return sections.map((section) => {
   const isTitle = isActivityTitle(section);
@@ -52,6 +54,8 @@ function splitActivityOptions(details) {
 const activitySequence = document.querySelector("[data-activity-sequence]");
 const images = currentPage.images || [currentPage.image];
 const optionGroups = splitActivityOptions(currentData.activityDetails || []);
+const eyebrow = document.querySelector(".eyebrow");
+if (eyebrow) eyebrow.textContent = optionGroups.length ? "Quiz + Activities" : "Quiz";
 activitySequence.innerHTML = optionGroups.map((sections, index) => `
   <article class="activity-option">
     <div class="activity-image">

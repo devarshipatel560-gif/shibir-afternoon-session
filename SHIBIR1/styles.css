@@ -1,6 +1,35 @@
+@font-face {
+  font-family: "Krishna";
+  src: url("Font/KrishnaUniN.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Krishna";
+  src: url("Font/KrishnaUniI.ttf") format("truetype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Krishna";
+  src: url("Font/KrishnaUniB.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Krishna";
+  src: url("Font/KrishnaUniBI.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
 :root {
   --f-serif: "Fraunces", Georgia, serif;
-  --f-guj: "Noto Sans Gujarati", "Nirmala UI", "Shruti", system-ui, sans-serif;
+  --f-guj: "Krishna", "Noto Sans Gujarati", "Nirmala UI", "Shruti", system-ui, sans-serif;
   --f-sans: "Inter", system-ui, sans-serif;
   --bg: #f6f1ea;
   --bg-alt: #ede4d7;
@@ -108,8 +137,8 @@ a { color: inherit; }
   background: rgba(255, 250, 243, .66);
   border-radius: 999px;
   padding: 6px 13px;
-  font-weight: 700;
-  font-size: .9rem;
+  font-weight: 800;
+  font-size: 1rem;
   transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
 }
 
@@ -351,7 +380,7 @@ details[open] summary::after { content: "-"; }
 .prasang {
   margin-top: 12px;
   color: var(--ink-soft);
-  font-size: .96rem;
+  font-size: 1.04rem;
 }
 
 .prasang p + p { margin-top: 10px; }
@@ -516,7 +545,7 @@ details[open] summary::after { content: "-"; }
   .nav { flex-direction: column; padding: 12px 16px; }
   .brand { min-width: 0; }
   .nav-pills { justify-content: center; }
-  .nav-pill { font-size: .82rem; padding: 6px 10px; }
+  .nav-pill { font-size: .9rem; padding: 6px 10px; }
   .hero { padding: 38px 18px 30px; }
   .logo-card { padding: 8px; }
   .logo-card img { width: 100%; }
